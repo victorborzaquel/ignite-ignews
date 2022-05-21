@@ -24,8 +24,7 @@ const relevantEvents = new Set([
   'checkout.session.completed',
   // 'customer.subscriptions.created',
   'customer.subscriptions.updated',
-  'customer.subscriptions.deleted',
-  'charge.refunded'
+  'customer.subscriptions.deleted'
 ])
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
