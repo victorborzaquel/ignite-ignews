@@ -42,15 +42,12 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
     const { type } = event
 
-    // console.log('TYPE: ', type)
-
     if (relevantEvents.has(type)) {
       try {
         switch (type) {
           case 'customer.subscription.created':
           case 'customer.subscription.updated':
           case 'customer.subscription.deleted':
-          case 'charge.refunded':
 
             const subscription = event.data.object as Stripe.Subscription
 
